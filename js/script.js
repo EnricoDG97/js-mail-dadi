@@ -82,4 +82,13 @@ let diceComputerElement = document.getElementById("diceComputer");
 let buttonThrowDiceEl = document.getElementById("buttonThrowDice");
 let diceThrowOuctputEl = document.getElementById("diceThrowOuctput");
 
+// attivare generazione casuale di un numero al premere del pulsante
+buttonThrowDiceEl.addEventListener("click", function() {
+    // generazione numero utente
+    const numberGenUser = Math.floor(Math.random() * 6 + 1);
+    // generazione numero computer
+    const numberComputerUser = Math.floor(Math.random() * 6 + 1);
+    console.log(numberGenUser);
+    console.log(numberComputerUser);
+});
 
