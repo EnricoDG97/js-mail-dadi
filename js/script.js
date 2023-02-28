@@ -28,6 +28,9 @@ const emailsAccepted = ["asd@ciao.it", "abcde@ciao.it", "possoentrare@perfavore.
 let userEmailEl = document.getElementById("userEmail");
 let submitEl = document.getElementById("submit");
 
+// selezione preventiva del output desiderato
+let accessOutputEl = document.getElementById("accessOutput")
+
 submitEl.addEventListener("click", function() {
     // aggiungo variabile sentinella
     let isEmailAcceptable = false;
@@ -39,8 +42,12 @@ submitEl.addEventListener("click", function() {
     }
     // se è stata verifica la presenza e la varibaile è vera:
     if(isEmailAcceptable == true) {
-        console.log("true")
+        accessOutputEl.style.display = "block";
+        accessOutputEl.innerText = "Email verificata. Accesso Consentito";
+        accessOutputEl.style.color = "#1ed01b"
     } else {
-        console.log("false")
+        accessOutputEl.style.display = "block";
+        accessOutputEl.innerText = "Email non verificata. Accesso Negato";
+        accessOutputEl.style.color = "#d0211b"
     }
 ;})
