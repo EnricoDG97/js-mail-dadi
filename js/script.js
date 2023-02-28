@@ -51,3 +51,35 @@ submitEl.addEventListener("click", function() {
         accessOutputEl.style.color = "#d0211b"
     }
 ;})
+
+
+/*
+SECOND TRACK
+Gioco dei dadi
+Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+Stabilire il vincitore, in base a chi fa il punteggio più alto.
+Prima di partire a scrivere codice poniamoci qualche domanda:
+Che ci sia un array da qualche parte?
+Se dobbiamo confrontare qualcosa che "cosa" ci serve?
+*/
+
+/*
+pseud-code:
+-creazione lista di dadi icone
+-genero un numero random per ciuascuno degli sfidanti
+-SE il l'indidce di dado dell'user è maggiore rispetto al indice di dado del computer:
+    scrivere "win"
+ALTRIMENTI 
+    scriver "lose"
+in entrambi i casi mostrare le icone dei dadi che corrispondo agli indici della lista
+*/
+
+// creazione lista dadi
+const diceIcons = ["fa-dice-one", "fa-dice-two", "fa-dice-three", "fa-dice-four", "fa-dice-five", "fa-dice-six"];
+// creazione variali per selezionare id dei div html
+let diceUserElement = document.getElementById("diceUser");
+let diceComputerElement = document.getElementById("diceComputer");
+let buttonThrowDiceEl = document.getElementById("buttonThrowDice");
+let diceThrowOuctputEl = document.getElementById("diceThrowOuctput");
+
+
