@@ -88,7 +88,26 @@ buttonThrowDiceEl.addEventListener("click", function() {
     const numberGenUser = Math.floor(Math.random() * 6 + 1);
     // generazione numero computer
     const numberComputerUser = Math.floor(Math.random() * 6 + 1);
-    console.log(numberGenUser);
-    console.log(numberComputerUser);
+   
+    if( numberGenUser > numberComputerUser) {
+        // stampo in console        
+        console.log("vince user");
+        // STAMPO IN PAGINA
+        diceThrowOuctputEl.innerHTML = "L'utente ha vinto e ha tirato: " + numberGenUser;
+    } else if(numberGenUser < numberComputerUser) {
+        // stampo in console
+        console.log("vince computer");
+        // STAMPO IN PAGINA
+        diceThrowOuctputEl.innerHTML = "Il computer ha vinto e ha tirato: " + numberComputerUser;
+    } else {
+        // stampo in console        
+        console.log("parità");
+        // STAMPO IN PAGINA
+        diceThrowOuctputEl.innerHTML = "Il sorteggio si è concluso in parità."
+    }
+
+    diceUserElement.classList.add(diceIcons[numberGenUser - 1]);
+    diceComputerElement.classList.add(diceIcons[numberComputerUser - 1]);
+    document.getElementById("buttonThrowDice").style.display = "none";
 });
 
